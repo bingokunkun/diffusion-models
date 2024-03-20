@@ -14,7 +14,7 @@ from torch.utils.data import DataLoader
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-batch_size = 8
+batch_size = 16
 dataset = torchvision.datasets.MNIST(root="mnist/", train=True, download=True, transform=torchvision.transforms.ToTensor())
 train_dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
 n_epochs = 3
